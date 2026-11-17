@@ -1,12 +1,12 @@
 import "./globals.css";
 import Link from "next/link";
-import { Playfair_Display, Source_Serif_4, Inter } from "next/font/google";
+import { Playfair_Display, Source_Serif_4 } from "next/font/google";
 import { site } from "@/lib/site";
 import { areas } from "@/lib/areas";
 
-const t = Playfair_Display({ subsets: ["latin"], variable: "--f-titulo" });
-const s = Source_Serif_4({ subsets: ["latin"], variable: "--f-serif" });
-const i = Inter({ subsets: ["latin"], variable: "--f-corpo" });
+const t = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--f-titulo", display: "swap" });
+// Source Serif 4 é a evolução oficial da antiga Source Serif Pro.
+const s = Source_Serif_4({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--f-corpo", display: "swap" });
 
 export const metadata = {
   metadataBase: new URL(site.url),
@@ -39,7 +39,7 @@ export default function Layout({ children }) {
   };
 
   return (
-    <html lang="pt-BR" className={`${t.variable} ${s.variable} ${i.variable}`}>
+    <html lang="pt-BR" className={`${t.variable} ${s.variable}`}>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
         <header><div className="w">
