@@ -1,32 +1,198 @@
-:root{--petroleo:#0F3D46;--ouro:#C9A96B;--marfim:#F6F2EA;--texto:#1d2b2e}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--marfim);color:var(--texto);font:17px/1.7 var(--f-corpo),sans-serif}
-h1,h2,h3{font-family:var(--f-titulo),serif;font-weight:500;line-height:1.15;color:var(--petroleo);margin:0 0 .6em}
-h1{font-size:clamp(2.2rem,5vw,4rem)}h2{font-size:clamp(1.6rem,3vw,2.4rem)}p{max-width:62ch;font-family:var(--f-serif),serif}
-a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
-.w{width:min(1120px,92%);margin:auto}
-header{border-bottom:1px solid var(--ouro);position:sticky;top:0;background:var(--marfim);z-index:5}
-header .w{display:flex;align-items:center;justify-content:space-between;padding:.4rem 0}
-.logo{height:64px;width:auto;mix-blend-mode:multiply}
-nav{display:flex;gap:1.6rem;font-size:.95rem}nav a{text-decoration:none;color:inherit;border-bottom:1px solid transparent;transition:border-color .2s}nav a:hover{border-color:var(--ouro)}
-details.m{display:none}
-@media(max-width:760px){header nav{display:none}details.m{display:block}details.m summary{cursor:pointer;padding:.5rem}details.m div{position:absolute;right:4%;top:100%;background:var(--marfim);border:1px solid var(--ouro);padding:1rem;display:grid;gap:.8rem}}
-.hero{background:var(--petroleo);color:var(--marfim);padding:clamp(4rem,12vw,9rem) 0}
-.hero h1{color:var(--marfim);max-width:16ch;animation:in .9s both}.hero p{color:#dfe6e4;animation:in .9s .2s both}
-.hero .w{display:grid;grid-template-columns:1.4fr 1fr;gap:4rem;align-items:end}
-.hero aside{border-left:1px solid var(--ouro);padding-left:1.5rem;font-size:.95rem}
-@media(max-width:760px){.hero .w{grid-template-columns:1fr;gap:2rem}}
-@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
-.btn{display:inline-block;background:var(--ouro);color:var(--petroleo);padding:.8rem 1.6rem;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:600;transition:background .2s}.btn:hover{background:#d8bb83}
-.sec{padding:clamp(3rem,8vw,6rem) 0}.alt{background:#ece6d8}
-.fam{display:grid;grid-template-columns:1fr 1.3fr;gap:4rem}@media(max-width:760px){.fam{grid-template-columns:1fr;gap:1.5rem}}
-.list a{display:block;padding:1.1rem 0;border-top:1px solid var(--ouro);text-decoration:none;color:inherit;transition:padding .2s}.list a:hover{padding-left:.8rem}
-.list b{font-family:var(--f-titulo),serif;font-size:1.25rem;color:var(--petroleo);display:block}
-.item{padding:1.2rem 0;border-top:1px solid #d9cfb8}.item h3{font-size:1.3rem;margin-bottom:.2em}
-details.q{border-top:1px solid #d9cfb8;padding:1rem 0}details.q summary{cursor:pointer;font-weight:600}
-.note{border-left:3px solid var(--ouro);padding:.5rem 1rem;background:#fff6}
-form{display:grid;gap:1rem;max-width:520px}input,select{padding:.7rem;border:1px solid #b9ae95;background:#fff;font:inherit}label{display:grid;gap:.3rem;font-size:.95rem}
-footer{background:var(--petroleo);color:#cfdad8;padding:3rem 0;font-size:.92rem}footer a{display:block;text-decoration:none;color:inherit;padding:.15rem 0}footer h2{font-size:1.1rem;color:var(--ouro)}footer p{color:inherit}
-footer .w{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem}
-.bc{font-size:.85rem;margin-bottom:1rem}
+:root {
+  /* Identidade visual oficial Farias Leme */
+  --petroleo: #0F3D46;
+  --ouro: #C9A96B;
+  --marfim: #F6F2EA;
+  --texto: #1d2b2e;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--marfim);
+  color: var(--texto);
+  font: 17px/1.7 var(--f-corpo), serif;
+}
+
+h1, h2, h3 {
+  font-family: var(--f-titulo), serif;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--petroleo);
+  margin: 0 0 .6em;
+}
+h1 { font-size: clamp(2.2rem, 5vw, 4rem); }
+h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
+p {
+  max-width: 62ch;
+  font-family: var(--f-corpo), serif;
+}
+
+a:focus-visible, button:focus-visible, summary:focus-visible,
+input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--ouro);
+  outline-offset: 3px;
+}
+::selection { background: var(--ouro); color: var(--petroleo); }
+
+.w { width: min(1120px, 92%); margin: auto; }
+header {
+  border-bottom: 1px solid var(--ouro);
+  position: sticky;
+  top: 0;
+  background: var(--marfim);
+  z-index: 5;
+}
+header .w {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .4rem 0;
+}
+.logo { height: 64px; width: auto; mix-blend-mode: multiply; }
+nav { display: flex; gap: 1.6rem; font-size: .95rem; }
+nav a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s;
+}
+nav a:hover { border-color: var(--ouro); }
+details.m { display: none; }
+
+@media (max-width: 760px) {
+  header nav { display: none; }
+  details.m { display: block; }
+  details.m summary { cursor: pointer; padding: .5rem; }
+  details.m div {
+    position: absolute;
+    right: 4%;
+    top: 100%;
+    background: var(--marfim);
+    border: 1px solid var(--ouro);
+    padding: 1rem;
+    display: grid;
+    gap: .8rem;
+  }
+}
+
+.hero {
+  background: var(--petroleo);
+  color: var(--marfim);
+  padding: clamp(4rem, 12vw, 9rem) 0;
+}
+.hero h1 {
+  color: var(--marfim);
+  max-width: 16ch;
+  animation: in .9s both;
+}
+.hero p { color: var(--marfim); animation: in .9s .2s both; }
+.hero .w {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 4rem;
+  align-items: end;
+}
+.hero aside {
+  border-left: 1px solid var(--ouro);
+  padding-left: 1.5rem;
+  font-size: .95rem;
+}
+@media (max-width: 760px) {
+  .hero .w { grid-template-columns: 1fr; gap: 2rem; }
+}
+@keyframes in {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto; }
+}
+
+.btn {
+  display: inline-block;
+  background: var(--ouro);
+  color: var(--petroleo);
+  padding: .8rem 1.6rem;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  transition: background .2s;
+}
+.btn:hover { background: #d8bb83; }
+
+.sec { padding: clamp(3rem, 8vw, 6rem) 0; }
+/* Blocos institucionais usam o azul-petróleo da identidade. */
+.alt { background: var(--petroleo); color: var(--marfim); }
+.alt h2, .alt h3 { color: var(--marfim); }
+.alt p { color: var(--marfim); }
+
+.fam {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 4rem;
+}
+@media (max-width: 760px) {
+  .fam { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+
+.list a {
+  display: block;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--ouro);
+  text-decoration: none;
+  color: inherit;
+  transition: padding .2s;
+}
+.list a:hover { padding-left: .8rem; }
+.list b {
+  font-family: var(--f-titulo), serif;
+  font-size: 1.25rem;
+  color: var(--petroleo);
+  display: block;
+}
+.alt .list b { color: var(--marfim); }
+
+.item { padding: 1.2rem 0; border-top: 1px solid var(--ouro); }
+.item h3 { font-size: 1.3rem; margin-bottom: .2em; }
+details.q { border-top: 1px solid var(--ouro); padding: 1rem 0; }
+details.q summary { cursor: pointer; font-weight: 600; }
+.note {
+  border-left: 3px solid var(--ouro);
+  padding: .5rem 1rem;
+  background: rgb(201 169 107 / 10%);
+}
+
+form { display: grid; gap: 1rem; max-width: 520px; }
+input, select {
+  padding: .7rem;
+  border: 1px solid var(--ouro);
+  background: var(--marfim);
+  color: var(--texto);
+  font: inherit;
+}
+label { display: grid; gap: .3rem; font-size: .95rem; }
+
+footer {
+  background: var(--petroleo);
+  color: var(--marfim);
+  padding: 3rem 0;
+  font-size: .92rem;
+}
+footer a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: .15rem 0;
+}
+footer h2 { font-size: 1.1rem; color: var(--ouro); }
+footer p { color: inherit; }
+footer .w {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+.bc { font-size: .85rem; margin-bottom: 1rem; }

@@ -10,7 +10,7 @@ export default function Area({ params }) {
   return (<section className="sec"><div className="w">
     <nav className="bc" aria-label="Breadcrumb"><Link href="/">Início</Link> / <Link href="/areas-de-atuacao">Áreas</Link> / {a.title}</nav>
     <h1>{a.title}</h1><p>{a.lead}</p>
-    {a.note && <p className="note">{a.note}</p>}
+    {a.note && <p>{a.note}</p>}
     {a.items.map(([t, d]) => <div className="item" id={t} key={t}><h3>{t}</h3><p>{d}</p></div>)}
     {a.faq && <><h2 style={{ marginTop: "3rem" }}>Perguntas frequentes</h2>{a.faq.map(([q, r]) => <details className="q" key={q}><summary>{q}</summary><p>{r}</p></details>)}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} /></>}
