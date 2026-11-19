@@ -1,9 +1,5 @@
 # Farias Leme Advocacia — site (Next.js 14)
 
-## Rodar localmente
-`npm install`
-`npm run dev` (http://localhost:3000)
-
 ## Dados institucionais
 Os dados oficiais do escritório, contatos e endereço estão centralizados em `lib/site.js`.
 
