@@ -3,9 +3,9 @@ import Link from "next/link";
 import { Playfair_Display, Source_Serif_4 } from "next/font/google";
 import { site } from "@/lib/site";
 import { areas } from "@/lib/areas";
+import MobileNav from "@/app/components/MobileNav";
 
 const t = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--f-titulo", display: "swap" });
-// Source Serif 4 é a evolução oficial da antiga Source Serif Pro.
 const s = Source_Serif_4({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--f-corpo", display: "swap" });
 
 export const metadata = {
@@ -44,8 +44,8 @@ export default function Layout({ children }) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
         <header><div className="w">
           <Link href="/" aria-label="Farias Leme Advocacia, início"><img className="logo" src="/brand/logo-claro.jpg" alt="Farias Leme Advocacia" /></Link>
-          <nav aria-label="Principal">{links.map(([h, l]) => <Link key={h} href={h}>{l}</Link>)}</nav>
-          <details className="m"><summary>Menu</summary><div>{links.map(([h, l]) => <Link key={h} href={h}>{l}</Link>)}</div></details>
+          <nav className="desktop-nav" aria-label="Principal">{links.map(([h, l]) => <Link key={h} href={h}>{l}</Link>)}</nav>
+          <MobileNav />
         </div></header>
         <main>{children}</main>
         <footer><div className="w">
