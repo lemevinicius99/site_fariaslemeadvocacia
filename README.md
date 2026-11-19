@@ -4,12 +4,6 @@
 `npm install`
 `npm run dev` (http://localhost:3000)
 
-## Publicação
-1. Crie uma branch para as alterações e revise os arquivos.
-2. Envie a branch ao GitHub e abra um Pull Request.
-3. Confira o preview da Vercel.
-4. Após aprovação, faça merge na branch principal.
-
 ## Dados institucionais
 Os dados oficiais do escritório, contatos e endereço estão centralizados em `lib/site.js`.
 
