@@ -28,7 +28,8 @@ const team = [
   {
     name: "Sara Santos",
     role: "Estagiária de Direito",
-    image: null,
+    image: "/team/sara.webp",
+    imageAlt: "Retrato profissional de Sara Santos",
     paragraphs: [
       "Sara integra a equipe da Farias Leme Advocacia e auxilia no atendimento inicial aos clientes, na organização de documentos e no acompanhamento das rotinas jurídicas e administrativas.",
       "Sob a supervisão da advogada responsável, contribui para manter as informações e os registros atualizados, apoiando a organização das demandas e a comunicação entre o escritório e seus clientes."
