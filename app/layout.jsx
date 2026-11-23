@@ -12,6 +12,11 @@ export const metadata = {
   metadataBase: new URL(site.url),
   title: { default: `${site.name} | Votorantim e Sorocaba`, template: `%s | ${site.name}` },
   description: "Atuação jurídica para pessoas, famílias e empresas. Atendimento presencial em Votorantim e região e on-line em todo o Brasil.",
+  icons: {
+    icon: [{ url: "/brand/logo-escuro.jpg", type: "image/jpeg" }],
+    shortcut: "/brand/logo-escuro.jpg",
+    apple: [{ url: "/brand/logo-escuro.jpg", type: "image/jpeg" }],
+  },
   openGraph: { siteName: site.name, locale: "pt_BR", type: "website" },
 };
 
