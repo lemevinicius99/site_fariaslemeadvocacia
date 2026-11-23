@@ -7,7 +7,7 @@ const team = [
   {
     name: "Ariele Gomes Farias Leme da Silva",
     role: "Advogada fundadora | OAB/SP 451.476",
-    image: "/team/ariele.webp",
+    image: "/team/Ariele%20Leme.png",
     imageAlt: "Retrato profissional da advogada Ariele Gomes Farias Leme da Silva",
     paragraphs: [
       "Advogada desde dezembro de 2020, Ariele fundou o escritório em junho de 2021 e conduz sua atuação jurídica. É responsável pelo atendimento aos clientes, pela análise das demandas e pela definição e pelo acompanhamento das estratégias jurídicas.",
@@ -18,7 +18,7 @@ const team = [
   {
     name: "Vinícius Leme",
     role: "Gestão da Qualidade e Tecnologia",
-    image: "/team/vinicius.webp",
+    image: "/team/Vinicius%20Leme.png",
     imageAlt: "Retrato profissional de Vinícius Leme",
     paragraphs: [
       "Responsável pela gestão da qualidade e pela tecnologia da Farias Leme Advocacia, atua na avaliação e no aprimoramento dos processos internos, na organização dos fluxos de trabalho e no desenvolvimento e na manutenção dos recursos digitais do escritório.",
@@ -28,7 +28,7 @@ const team = [
   {
     name: "Sara Santos",
     role: "Estagiária de Direito",
-    image: "/team/sara.webp",
+    image: "/team/Sara%20Santos.png",
     imageAlt: "Retrato profissional de Sara Santos",
     paragraphs: [
       "Sara integra a equipe da Farias Leme Advocacia e auxilia no atendimento inicial aos clientes, na organização de documentos e no acompanhamento das rotinas jurídicas e administrativas.",
